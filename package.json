@@ -1,5 +1,5 @@
 {
-  "name": "react-hot-boilerplate",
+  "name": "react-redux-search",
   "version": "1.0.0",
   "description": "Boilerplate for ReactJS project with hot code reloading",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gaearon/react-hot-boilerplate.git"
+    "url": "git+https://github.com/Bhagabat/react-redux-search.git"
   },
   "keywords": [
     "react",
@@ -24,9 +24,9 @@
   "author": "Dan Abramov <dan.abramov@me.com> (http://github.com/gaearon)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/gaearon/react-hot-boilerplate/issues"
+    "url": "https://github.com/Bhagabat/react-redux-search/issues"
   },
-  "homepage": "https://github.com/gaearon/react-hot-boilerplate",
+  "homepage": "https://github.com/Bhagabat/react-redux-search#readme",
   "devDependencies": {
     "babel-core": "^5.8.3",
     "babel-eslint": "^4.0.5",
