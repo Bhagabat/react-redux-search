@@ -3,22 +3,9 @@ import omit from 'lodash/object/omit';
 import assign from 'lodash/object/assign';
 import mapValues from 'lodash/object/mapValues';
 
+const allData = [{value:"www.youtube.com"},{value:"www.google.com"}]
 const initialState = {
-  friends: [1, 2, 3],
-  friendsById: {
-    1: {
-      id: 1,
-      name: 'Theodore Roosevelt'
-    },
-    2: {
-      id: 2,
-      name: 'Abraham Lincoln'
-    },
-    3: {
-      id: 3,
-      name: 'George Washington'
-    }
-  }
+  data:[]
 };
 
 export default function friends(state = initialState, action) {
@@ -45,14 +32,12 @@ export default function friends(state = initialState, action) {
         friendsById: omit(state.friendsById, action.id)
       }
 
-    case 'demo':
-    	console.log("demo..............",action.id);
+    case 'search':
+    	console.log("demo..............",action.value);
       return {
         ...state,
-        friendsById: mapValues(state.friendsById, (friend) => {
-          return friend.id === action.id ?
-            assign({}, friend, { starred: !friend.starred }) :
-            friend
+        data:allData.filter(function(v){
+        	return v.value.indexOf(action.value)>-1
         })
       }
     

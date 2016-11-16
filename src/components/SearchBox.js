@@ -1,19 +1,13 @@
 import React, { Component, PropTypes } from 'react';
-import classnames from 'classnames';
-import styles from './AddFriendInput.css';
-
-export default class AddFriendInput extends Component {
-  static propTypes = {
-    addFriend: PropTypes.func.isRequired
-  }
+export default class SearchBox extends Component {
+  
 
   render () {
     return (
       <input
         type="text"
         autoFocus="true"
-        className={classnames('form-control', styles.addFriendInput)}
-        placeholder="Type the name of a friend"
+        placeholder="Enter a key word for search"
         value={this.state.name}
         onChange={this.handleChange.bind(this)}
         onKeyDown={this.handleSubmit.bind(this)} />
@@ -34,7 +28,8 @@ export default class AddFriendInput extends Component {
   handleSubmit (e) {
     const name = e.target.value.trim();
     if (e.which === 13) {
-      this.props.addFriend(name);
+      //this.props.addFriend(name);
+    	this.props.search(name);
       this.setState({ name: '' });
     }
   }

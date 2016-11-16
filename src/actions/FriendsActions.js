@@ -22,9 +22,9 @@ export function starFriend(id) {
   };
 }
 
-export function demo(id) {
+export function search(value) {
 	  return {
-	    type: 'demo',
-	    id
+	    type: 'search',
+	    value
 	  };
 	}
