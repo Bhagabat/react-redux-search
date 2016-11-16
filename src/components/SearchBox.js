@@ -1,10 +1,11 @@
 import React, { Component, PropTypes } from 'react';
+import style from '../css/main.css';
 export default class SearchBox extends Component {
   
 
   render () {
     return (
-      <input
+      <input className={style.searchBox}
         type="text"
         autoFocus="true"
         placeholder="Enter a key word for search"

@@ -37,7 +37,14 @@ export default class Editor extends Component {
 	    		</div>
 	
 	    		<div className={style.leftcolumn}>
-	    		<div className={style.innertube}>left menu</div>
+	    		<div className={style.innertube}>
+	    			<ul className={style.menu}>
+	    				<li>Google</li>
+	    				<li>Bing</li>
+	    				<li>Yahoo</li>
+	    				<li>MSN</li>
+	    			</ul>
+	    		</div>
 	
 	    		</div>
 	

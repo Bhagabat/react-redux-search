@@ -4,7 +4,7 @@ import { Provider} from 'react-redux';
 
 
 import * as reducers from '../reducers';
-import Editor from './MainContainer';
+import MainPanel from './MainContainer';
 const reducer = combineReducers(reducers);
 const store = createStore(reducer);
 
@@ -13,10 +13,8 @@ export default class App extends Component {
     return (
       <div>
         <Provider store={store}>
-          {() => <Editor /> }
+          {() => <MainPanel /> }
         </Provider>
-
-       
       </div>
     );
   }

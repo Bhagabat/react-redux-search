@@ -1,6 +1,11 @@
 import * as types from '../constants/ActionTypes';
 
-const allData = [{value:"www.youtube.com"},{value:"www.google.com"}]
+const allData = [
+                 {value:"www.youtube.com"},
+                 {value:"www.youtube.com/hjhj"},
+                 {value:"www.youtube.com/video"},
+                 {value:"www.google.com"},
+                 ]
 const initialState = {
   data:[]
 };

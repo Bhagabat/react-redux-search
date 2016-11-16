@@ -1,12 +1,13 @@
 import React, { Component, PropTypes } from 'react';
+import style from '../css/main.css';
 export default class SearchResult extends Component {
   
 
   render () {
 	  console.log(this.state.data,"----")
     return (
-    		<ul>
-      {this.state.data.map(function(v,i){return <li key={v.value}>{v.value}</li>})}
+    		<ul className={style.searchResult}>
+      {this.state.data.length==0?<li key={1}>No match found !!!</li>:this.state.data.map(function(v,i){return <li key={v.value}>{v.value}</li>})}
       </ul>
     );
   }
