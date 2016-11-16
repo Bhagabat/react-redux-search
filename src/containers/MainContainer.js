@@ -6,11 +6,11 @@ import style from '../css/main.css';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 
-import * as FriendsActions from '../actions/FriendsActions';
-import { FriendList, AddFriendInput } from '../components';
+import * as FriendsActions from '../actions/SearchActions';
+
 
 @connect(state => ({
-  searchResult: state.friendlist
+  searchResult: state.searchReducer
 }))
 
 
@@ -41,7 +41,7 @@ export default class Editor extends Component {
 	
 	    		</div>
 	
-	    		<div className={style.footer}><a href="http://www.dynamicdrive.com/style/">Dynamic Drive CSS Library</a></div>
+	    		<div className={style.footer}>Footer content</div>
 
     		</div>
     );

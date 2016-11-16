@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
-import { combineReducers } from 'redux';
+import {createStore, combineReducers } from 'redux';
 import { Provider} from 'react-redux';
-
-import { createStore, renderDevTools } from '../store_enhancers/devTools';
 
 
 import * as reducers from '../reducers';
@@ -18,7 +16,7 @@ export default class App extends Component {
           {() => <Editor /> }
         </Provider>
 
-        {renderDevTools(store)}
+       
       </div>
     );
   }
